@@ -1,0 +1,28 @@
+FROM registry.fedoraproject.org/fedora:latest
+
+# systemd (init), sshd, sudo, python3 (Ansible needs it on targets),
+# plus tools our health checks will use later (free, ss, curl).
+RUN dnf -y install systemd openssh-server openssh-clients sudo python3 \
+        iproute procps-ng curl passwd \
+    && dnf clean all
+
+# '-p *' = no valid password but account NOT locked.
+# (A locked account makes sshd refuse even key logins when PAM is on.)
+RUN useradd -m -s /bin/bash -p '*' devops \
+    && echo 'devops ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/devops \
+    && chmod 440 /etc/sudoers.d/devops
+
+# Terraform will upload the public key into this directory at container creation.
+RUN mkdir -p /etc/ssh/keys && chmod 755 /etc/ssh/keys
+
+# Key-only auth, no root login, keys read from /etc/ssh/keys/<username>.pub
+RUN printf '%s\n' \
+    'AuthorizedKeysFile /etc/ssh/keys/%u.pub' \
+    'PasswordAuthentication no' \
+    'PermitRootLogin no' \
+    > /etc/ssh/sshd_config.d/10-lab.conf
+
+RUN systemctl enable sshd
+
+STOPSIGNAL SIGRTMIN+3
+CMD ["/sbin/init"]
