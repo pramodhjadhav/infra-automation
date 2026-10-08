@@ -156,3 +156,5 @@ Debug from the bottom layer up: Podman, then the container, then SSH, then Terra
 
 `terraform.tfstate*`, `.terraform/` and SSH keys are excluded via `.gitignore`.
 `terraform/.terraform.lock.hcl` **is** committed to pin the provider version.
+
+Challenges section: "Terraform plan showed a perpetual diff against Podman. The provider read back Podman defaults (pid_mode, ulimits, network gateway and IPAM driver) that weren't in my config, and marked them as forcing replacement. I identified them from the # forces replacement markers in the plan and fixed it with lifecycle { ignore_changes }."
