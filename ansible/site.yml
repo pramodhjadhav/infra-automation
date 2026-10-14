@@ -1,0 +1,8 @@
+---
+- name: Configure web servers
+  hosts: web
+  become: true
+  roles:
+    - { role: common, tags: [common, users] }
+    - { role: nginx,  tags: [nginx] }
+    - { role: verify, tags: [verify] }

@@ -1,0 +1,35 @@
+---
+- name: Check the Nginx service is active
+  ansible.builtin.command: systemctl is-active nginx
+  register: nginx_state
+  changed_when: false
+  failed_when: nginx_state.stdout != 'active'
+
+- name: HTTP check from inside the server
+  ansible.builtin.uri:
+    url: "http://127.0.0.1:{{ nginx_listen_port }}/"
+    status_code: 200
+    return_content: true
+  register: local_http
+
+- name: Confirm the page identifies this server
+  ansible.builtin.assert:
+    that:
+      - ansible_facts['hostname'] in local_http.content
+    success_msg: "Home page served correctly by {{ inventory_hostname }}"
+    fail_msg: "Home page did not contain this server's hostname"
+
+- name: HTTP check from the host through the published port
+  ansible.builtin.uri:
+    url: "http://127.0.0.1:{{ http_port }}/health"
+    status_code: 200
+    return_content: true
+  delegate_to: localhost
+  become: false
+  register: host_http
+
+- name: Confirm the health endpoint answers ok
+  ansible.builtin.assert:
+    that:
+      - host_http.content | trim == 'ok'
+    success_msg: "{{ inventory_hostname }} healthy on host port {{ http_port }}"

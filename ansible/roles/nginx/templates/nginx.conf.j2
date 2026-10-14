@@ -1,0 +1,37 @@
+# Managed by Ansible - do not edit by hand
+user nginx;
+worker_processes auto;
+error_log /var/log/nginx/error.log notice;
+pid /run/nginx.pid;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+    access_log    /var/log/nginx/access.log;
+    sendfile      on;
+    keepalive_timeout 65;
+
+    server {
+        listen {{ nginx_listen_port }} default_server;
+        server_name _;
+
+        root  /usr/share/nginx/html;
+        index index.html;
+
+        add_header X-Served-By "{{ inventory_hostname }}" always;
+
+        location / {
+            try_files $uri $uri/ =404;
+        }
+
+        # Simple endpoint for the Week 3 health checker
+        location = /health {
+            default_type text/plain;
+            return 200 "ok\n";
+        }
+    }
+}

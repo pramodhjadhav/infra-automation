@@ -1,0 +1,44 @@
+---
+- name: Make sure the SSH key directory exists
+  ansible.builtin.file:
+    path: /etc/ssh/keys
+    state: directory
+    owner: root
+    group: root
+    mode: "0755"
+
+- name: Create application users
+  ansible.builtin.user:
+    name: "{{ item.name }}"
+    comment: "{{ item.comment }}"
+    shell: /bin/bash
+    create_home: true
+    password: "*"            # no password login, but the account is NOT locked
+    update_password: on_create
+    state: present
+  loop: "{{ app_users }}"
+  loop_control:
+    label: "{{ item.name }}"
+
+- name: Install the SSH public key where sshd looks for it
+  ansible.builtin.copy:
+    content: "{{ lookup('file', ssh_public_key_file) }}"
+    dest: "/etc/ssh/keys/{{ item.name }}.pub"
+    owner: root
+    group: root
+    mode: "0644"
+  loop: "{{ app_users }}"
+  loop_control:
+    label: "{{ item.name }}"
+
+- name: Grant passwordless sudo to admin users
+  ansible.builtin.copy:
+    content: "{{ item.name }} ALL=(ALL) NOPASSWD:ALL\n"
+    dest: "/etc/sudoers.d/{{ item.name }}"
+    owner: root
+    group: root
+    mode: "0440"
+    validate: "/usr/sbin/visudo -cf %s"
+  loop: "{{ app_users | selectattr('sudo') | list }}"
+  loop_control:
+    label: "{{ item.name }}"

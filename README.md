@@ -158,3 +158,30 @@ Debug from the bottom layer up: Podman, then the container, then SSH, then Terra
 `terraform/.terraform.lock.hcl` **is** committed to pin the provider version.
 
 Challenges section: "Terraform plan showed a perpetual diff against Podman. The provider read back Podman defaults (pid_mode, ulimits, network gateway and IPAM driver) that weren't in my config, and marked them as forcing replacement. I identified them from the # forces replacement markers in the plan and fixed it with lifecycle { ignore_changes }."
+## Week 2: Ansible configuration
+
+Ansible logs into both servers over SSH and configures them. The inventory is
+generated from Terraform's output, so servers are defined in one place.
+
+```bash
+terraform -chdir=terraform output -raw ansible_inventory > ansible/inventory.ini
+cd ansible
+ansible all -m ping
+ansible-playbook site.yml
+ansible-playbook site.yml    # second run: changed=0 (idempotent)
+```
+
+Roles:
+
+- `common`: creates users, installs their SSH keys, grants sudo to admin users
+- `nginx`: installs Nginx, deploys the config and home page from templates, reloads via a handler
+- `verify`: checks the service, the page content and the /health endpoint, from inside the server and through the published host port
+
+Sample run: `docs/week2-playbook-run.txt`
+
+### Week 2 challenges
+
+- Running Ansible from the wrong folder: `inventory.ini` is a relative path, so commands must run from `ansible/`
+- sshd reads keys from `/etc/ssh/keys/%u.pub` (set in the Containerfile), so the role installs keys there
+- Nginx in a rootless container needed a systemd drop-in (`PrivateTmp=false`)
+- With Nginx stopped, the published port answers with "connection reset" instead of "refused"

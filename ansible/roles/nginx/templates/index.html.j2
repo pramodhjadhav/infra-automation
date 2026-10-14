@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head><title>{{ nginx_site_title }}</title></head>
+<body>
+  <h1>{{ nginx_site_title }}</h1>
+  <p>Server: <strong>{{ ansible_facts['hostname'] }}</strong></p>
+  <p>Inventory name: {{ inventory_hostname }}</p>
+  <p>OS: {{ ansible_facts['distribution'] }} {{ ansible_facts['distribution_version'] }}</p>
+  <p>Configured by Ansible.</p>
+</body>
+</html>

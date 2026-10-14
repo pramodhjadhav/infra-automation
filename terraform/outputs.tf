@@ -19,7 +19,7 @@ output "ansible_inventory" {
   value = join("\n", concat(
     ["[web]"],
     [for name, s in var.servers :
-      "${name} ansible_host=127.0.0.1 ansible_port=${s.ssh_port} ansible_user=${var.ssh_user} ansible_ssh_private_key_file=${pathexpand(var.ssh_private_key_path)}"
+      "${name} ansible_host=127.0.0.1 ansible_port=${s.ssh_port} ansible_user=${var.ssh_user} ansible_ssh_private_key_file=${pathexpand(var.ssh_private_key_path)} http_port=${s.http_port}"
     ],
     ["", "[web:vars]", "ansible_ssh_common_args='-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'"]
   ))

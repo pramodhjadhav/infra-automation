@@ -1,0 +1,52 @@
+---
+- name: Install Nginx
+  ansible.builtin.dnf:
+    name: nginx
+    state: present
+
+# Container workaround: nginx.service may use PrivateTmp=true, which needs
+# mount-namespace permissions a rootless container can lack.
+- name: Create systemd drop-in directory for Nginx
+  ansible.builtin.file:
+    path: /etc/systemd/system/nginx.service.d
+    state: directory
+    mode: "0755"
+
+- name: Disable PrivateTmp for Nginx (rootless container)
+  ansible.builtin.copy:
+    content: "[Service]\nPrivateTmp=false\n"
+    dest: /etc/systemd/system/nginx.service.d/container.conf
+    mode: "0644"
+  register: nginx_dropin
+
+- name: Reload systemd so it sees the drop-in
+  ansible.builtin.systemd_service:
+    daemon_reload: true
+  when: nginx_dropin is changed
+
+- name: Deploy nginx.conf from template
+  ansible.builtin.template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+    owner: root
+    group: root
+    mode: "0644"
+  notify: Reload nginx
+
+- name: Deploy home page from template
+  ansible.builtin.template:
+    src: index.html.j2
+    dest: /usr/share/nginx/html/index.html
+    owner: root
+    group: root
+    mode: "0644"
+
+- name: Validate Nginx configuration
+  ansible.builtin.command: nginx -t
+  changed_when: false
+
+- name: Enable and start Nginx
+  ansible.builtin.systemd_service:
+    name: nginx
+    enabled: true
+    state: started

@@ -1,0 +1,8 @@
+---
+# Users to create on every web server.
+app_users:
+  - { name: appadmin, comment: "Application admin",        sudo: true }
+  - { name: monitor,  comment: "Monitoring user (Week 3)", sudo: false }
+
+# Public key placed for each user (the same lab key, for simplicity).
+ssh_public_key_file: "{{ lookup('env', 'HOME') }}/.ssh/infra_lab.pub"
