@@ -1,0 +1,420 @@
+{"time":"2026-10-21 19:33:01,379","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web1","error":"bad key"}
+{"time":"2026-10-21 19:33:01,383","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web1","error":"Connection refused"}
+{"time":"2026-10-21 19:33:01,386","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web1","status":"OK"}
+{"time":"2026-10-21 19:33:01,391","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":7.7}
+{"time":"2026-10-21 19:33:01,395","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":94.0}
+{"time":"2026-10-21 19:33:01,403","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":38.0}
+{"time":"2026-10-21 19:33:01,407","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":93.9}
+{"time":"2026-10-21 19:33:01,412","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","error":"refused"}
+{"time":"2026-10-21 19:33:01,414","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","error":"timeout"}
+{"time":"2026-10-21 19:33:01,416","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-21 19:33:01,419","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","detail":"HTTP 200, body='maintenance'"}
+{"time":"2026-10-21 19:33:01,424","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-21 19:33:01,425","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"DEGRADED","elapsed_s":0.00}
+{"time":"2026-10-21 19:33:01,428","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-21 19:33:01,428","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"UNREACHABLE","elapsed_s":0.00}
+{"time":"2026-10-21 20:21:05,818","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-21 20:21:05,852","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web1","error":"Server '[127.0.0.1]:2221' not found in known_hosts"}
+{"time":"2026-10-21 20:21:05,857","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web1","code":200}
+{"time":"2026-10-21 20:21:05,860","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-21 20:21:05,861","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"UNREACHABLE","elapsed_s":0.04}
+{"time":"2026-10-21 20:21:05,861","level":"INFO","logger":"health_check","msg":"event":"start","server":"web2"}
+{"time":"2026-10-21 20:21:05,894","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web2","error":"Server '[127.0.0.1]:2222' not found in known_hosts"}
+{"time":"2026-10-21 20:21:05,903","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web2","code":200}
+{"time":"2026-10-21 20:21:05,906","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web2","status":"OK"}
+{"time":"2026-10-21 20:21:05,906","level":"INFO","logger":"health_check","msg":"event":"done","server":"web2","overall":"UNREACHABLE","elapsed_s":0.05}
+{"time":"2026-10-21 20:26:47,660","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-21 20:26:47,694","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web1","error":"Server '[127.0.0.1]:2221' not found in known_hosts"}
+{"time":"2026-10-21 20:26:47,699","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web1","code":200}
+{"time":"2026-10-21 20:26:47,702","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-21 20:26:47,703","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"UNREACHABLE","elapsed_s":0.04}
+{"time":"2026-10-21 20:26:47,703","level":"INFO","logger":"health_check","msg":"event":"start","server":"web2"}
+{"time":"2026-10-21 20:26:47,736","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web2","error":"Server '[127.0.0.1]:2222' not found in known_hosts"}
+{"time":"2026-10-21 20:26:47,746","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web2","code":200}
+{"time":"2026-10-21 20:26:47,749","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web2","status":"OK"}
+{"time":"2026-10-21 20:26:47,749","level":"INFO","logger":"health_check","msg":"event":"done","server":"web2","overall":"UNREACHABLE","elapsed_s":0.05}
+{"time":"2026-10-21 20:27:45,402","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-21 20:27:45,436","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web1","error":"Server '[127.0.0.1]:2221' not found in known_hosts"}
+{"time":"2026-10-21 20:27:45,442","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web1","code":200}
+{"time":"2026-10-21 20:27:45,445","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-21 20:27:45,445","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"UNREACHABLE","elapsed_s":0.04}
+{"time":"2026-10-21 20:27:45,445","level":"INFO","logger":"health_check","msg":"event":"start","server":"web2"}
+{"time":"2026-10-21 20:27:45,479","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web2","error":"Server '[127.0.0.1]:2222' not found in known_hosts"}
+{"time":"2026-10-21 20:27:45,488","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web2","code":200}
+{"time":"2026-10-21 20:27:45,492","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web2","status":"OK"}
+{"time":"2026-10-21 20:27:45,492","level":"INFO","logger":"health_check","msg":"event":"done","server":"web2","overall":"UNREACHABLE","elapsed_s":0.05}
+{"time":"2026-10-21 20:31:06,147","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-21 20:31:06,246","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web1","status":"OK"}
+{"time":"2026-10-21 20:31:06,686","level":"DEBUG","logger":"health_check","msg":"cmd":"top -bn1 | grep -i 'Cpu(s)'","rc":0,"stdout":"%Cpu(s):  3.7 us,  3.0 sy,  0.0 ni, 92.1 id,  0.0 wa,  0.6 hi,  0.6 si,  0.0 st","stderr":""}
+{"time":"2026-10-21 20:31:06,686","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":7.9}
+{"time":"2026-10-21 20:31:06,769","level":"DEBUG","logger":"health_check","msg":"cmd":"free -m","rc":0,"stdout":"total        used        free      shared  buff/cache   available
+Mem:           31470       10970        6690        2209       16480       20499
+Swap:           8191           0        8191","stderr":""}
+{"time":"2026-10-21 20:31:06,769","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":34.9}
+{"time":"2026-10-21 20:31:06,844","level":"DEBUG","logger":"health_check","msg":"cmd":"df -h /","rc":0,"stdout":"Filesystem      Size  Used Avail Use% Mounted on
+overlay         476G   89G  383G  19% /","stderr":""}
+{"time":"2026-10-21 20:31:06,844","level":"DEBUG","logger":"health_check","msg":"check":"disk","server":"web1","usage":19}
+{"time":"2026-10-21 20:31:06,923","level":"DEBUG","logger":"health_check","msg":"cmd":"systemctl is-active nginx","rc":0,"stdout":"active","stderr":""}
+{"time":"2026-10-21 20:31:06,923","level":"DEBUG","logger":"health_check","msg":"check":"nginx_svc","server":"web1","state":"active"}
+{"time":"2026-10-21 20:31:06,938","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web1","code":200}
+{"time":"2026-10-21 20:31:06,941","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-21 20:31:06,942","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"HEALTHY","elapsed_s":0.79}
+{"time":"2026-10-21 20:31:06,942","level":"INFO","logger":"health_check","msg":"event":"start","server":"web2"}
+{"time":"2026-10-21 20:31:07,034","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web2","status":"OK"}
+{"time":"2026-10-21 20:31:07,463","level":"DEBUG","logger":"health_check","msg":"cmd":"top -bn1 | grep -i 'Cpu(s)'","rc":0,"stdout":"%Cpu(s):  0.6 us,  1.2 sy,  0.0 ni, 97.0 id,  0.0 wa,  0.6 hi,  0.6 si,  0.0 st","stderr":""}
+{"time":"2026-10-21 20:31:07,464","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web2","usage":3.0}
+{"time":"2026-10-21 20:31:07,536","level":"DEBUG","logger":"health_check","msg":"cmd":"free -m","rc":0,"stdout":"total        used        free      shared  buff/cache   available
+Mem:           31470       10972        6687        2209       16481       20497
+Swap:           8191           0        8191","stderr":""}
+{"time":"2026-10-21 20:31:07,537","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web2","usage":34.9}
+{"time":"2026-10-21 20:31:07,610","level":"DEBUG","logger":"health_check","msg":"cmd":"df -h /","rc":0,"stdout":"Filesystem      Size  Used Avail Use% Mounted on
+overlay         476G   89G  383G  19% /","stderr":""}
+{"time":"2026-10-21 20:31:07,610","level":"DEBUG","logger":"health_check","msg":"check":"disk","server":"web2","usage":19}
+{"time":"2026-10-21 20:31:07,686","level":"DEBUG","logger":"health_check","msg":"cmd":"systemctl is-active nginx","rc":0,"stdout":"active","stderr":""}
+{"time":"2026-10-21 20:31:07,687","level":"DEBUG","logger":"health_check","msg":"check":"nginx_svc","server":"web2","state":"active"}
+{"time":"2026-10-21 20:31:07,691","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web2","code":200}
+{"time":"2026-10-21 20:31:07,695","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web2","status":"OK"}
+{"time":"2026-10-21 20:31:07,696","level":"INFO","logger":"health_check","msg":"event":"done","server":"web2","overall":"HEALTHY","elapsed_s":0.75}
+{"time":"2026-10-22 10:43:41,649","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-22 10:43:41,748","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web1","status":"OK"}
+{"time":"2026-10-22 10:43:42,187","level":"DEBUG","logger":"health_check","msg":"cmd":"top -bn1 | grep -i 'Cpu(s)'","rc":0,"stdout":"%Cpu(s):  2.5 us,  4.3 sy,  0.0 ni, 92.0 id,  0.0 wa,  0.6 hi,  0.6 si,  0.0 st","stderr":""}
+{"time":"2026-10-22 10:43:42,187","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":8.0}
+{"time":"2026-10-22 10:43:42,263","level":"DEBUG","logger":"health_check","msg":"cmd":"free -m","rc":0,"stdout":"total        used        free      shared  buff/cache   available
+Mem:           31470       11043        6617        2251       16523       20426
+Swap:           8191           0        8191","stderr":""}
+{"time":"2026-10-22 10:43:42,264","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":35.1}
+{"time":"2026-10-22 10:43:42,338","level":"DEBUG","logger":"health_check","msg":"cmd":"df -h /","rc":0,"stdout":"Filesystem      Size  Used Avail Use% Mounted on
+overlay         476G   89G  383G  19% /","stderr":""}
+{"time":"2026-10-22 10:43:42,339","level":"DEBUG","logger":"health_check","msg":"check":"disk","server":"web1","usage":19}
+{"time":"2026-10-22 10:43:42,416","level":"DEBUG","logger":"health_check","msg":"cmd":"systemctl is-active nginx","rc":0,"stdout":"active","stderr":""}
+{"time":"2026-10-22 10:43:42,417","level":"DEBUG","logger":"health_check","msg":"check":"nginx_svc","server":"web1","state":"active"}
+{"time":"2026-10-22 10:43:42,431","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web1","code":200}
+{"time":"2026-10-22 10:43:42,435","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-22 10:43:42,435","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"HEALTHY","elapsed_s":0.79}
+{"time":"2026-10-22 10:43:50,307","level":"INFO","logger":"health_check","msg":"event":"start","server":"web2"}
+{"time":"2026-10-22 10:43:50,399","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web2","status":"OK"}
+{"time":"2026-10-22 10:43:50,845","level":"DEBUG","logger":"health_check","msg":"cmd":"top -bn1 | grep -i 'Cpu(s)'","rc":0,"stdout":"%Cpu(s):  1.8 us,  1.2 sy,  0.0 ni, 96.3 id,  0.0 wa,  0.6 hi,  0.0 si,  0.0 st","stderr":""}
+{"time":"2026-10-22 10:43:50,846","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web2","usage":3.7}
+{"time":"2026-10-22 10:43:50,920","level":"DEBUG","logger":"health_check","msg":"cmd":"free -m","rc":0,"stdout":"total        used        free      shared  buff/cache   available
+Mem:           31470       11057        6603        2252       16524       20412
+Swap:           8191           0        8191","stderr":""}
+{"time":"2026-10-22 10:43:50,921","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web2","usage":35.1}
+{"time":"2026-10-22 10:43:50,994","level":"DEBUG","logger":"health_check","msg":"cmd":"df -h /","rc":0,"stdout":"Filesystem      Size  Used Avail Use% Mounted on
+overlay         476G   89G  383G  19% /","stderr":""}
+{"time":"2026-10-22 10:43:50,995","level":"DEBUG","logger":"health_check","msg":"check":"disk","server":"web2","usage":19}
+{"time":"2026-10-22 10:43:51,071","level":"DEBUG","logger":"health_check","msg":"cmd":"systemctl is-active nginx","rc":0,"stdout":"active","stderr":""}
+{"time":"2026-10-22 10:43:51,071","level":"DEBUG","logger":"health_check","msg":"check":"nginx_svc","server":"web2","state":"active"}
+{"time":"2026-10-22 10:43:51,083","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web2","code":200}
+{"time":"2026-10-22 10:43:51,086","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web2","status":"OK"}
+{"time":"2026-10-22 10:43:51,086","level":"INFO","logger":"health_check","msg":"event":"done","server":"web2","overall":"HEALTHY","elapsed_s":0.78}
+{"time":"2026-10-22 10:44:01,406","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-22 10:44:01,504","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web1","status":"OK"}
+{"time":"2026-10-22 10:44:02,014","level":"DEBUG","logger":"health_check","msg":"cmd":"top -bn1 | grep -i 'Cpu(s)'","rc":0,"stdout":"%Cpu(s):  2.5 us, 14.1 sy,  0.0 ni, 82.8 id,  0.0 wa,  0.0 hi,  0.6 si,  0.0 st","stderr":""}
+{"time":"2026-10-22 10:44:02,015","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":17.2}
+{"time":"2026-10-22 10:44:02,092","level":"DEBUG","logger":"health_check","msg":"cmd":"free -m","rc":0,"stdout":"total        used        free      shared  buff/cache   available
+Mem:           31470       11051        6609        2251       16524       20419
+Swap:           8191           0        8191","stderr":""}
+{"time":"2026-10-22 10:44:02,093","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":35.1}
+{"time":"2026-10-22 10:44:02,170","level":"DEBUG","logger":"health_check","msg":"cmd":"df -h /","rc":0,"stdout":"Filesystem      Size  Used Avail Use% Mounted on
+overlay         476G   89G  383G  19% /","stderr":""}
+{"time":"2026-10-22 10:44:02,171","level":"DEBUG","logger":"health_check","msg":"check":"disk","server":"web1","usage":19}
+{"time":"2026-10-22 10:44:02,249","level":"DEBUG","logger":"health_check","msg":"cmd":"systemctl is-active nginx","rc":0,"stdout":"active","stderr":""}
+{"time":"2026-10-22 10:44:02,250","level":"DEBUG","logger":"health_check","msg":"check":"nginx_svc","server":"web1","state":"active"}
+{"time":"2026-10-22 10:44:02,264","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web1","code":200}
+{"time":"2026-10-22 10:44:02,268","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-22 10:44:02,268","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"HEALTHY","elapsed_s":0.86}
+{"time":"2026-10-22 10:44:02,269","level":"INFO","logger":"health_check","msg":"event":"start","server":"web2"}
+{"time":"2026-10-22 10:44:02,359","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web2","status":"OK"}
+{"time":"2026-10-22 10:44:02,776","level":"DEBUG","logger":"health_check","msg":"cmd":"top -bn1 | grep -i 'Cpu(s)'","rc":0,"stdout":"%Cpu(s):  5.5 us,  5.5 sy,  0.0 ni, 87.7 id,  0.0 wa,  0.6 hi,  0.6 si,  0.0 st","stderr":""}
+{"time":"2026-10-22 10:44:02,776","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web2","usage":12.3}
+{"time":"2026-10-22 10:44:02,852","level":"DEBUG","logger":"health_check","msg":"cmd":"free -m","rc":0,"stdout":"total        used        free      shared  buff/cache   available
+Mem:           31470       11069        6590        2251       16523       20400
+Swap:           8191           0        8191","stderr":""}
+{"time":"2026-10-22 10:44:02,853","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web2","usage":35.2}
+{"time":"2026-10-22 10:44:02,925","level":"DEBUG","logger":"health_check","msg":"cmd":"df -h /","rc":0,"stdout":"Filesystem      Size  Used Avail Use% Mounted on
+overlay         476G   89G  383G  19% /","stderr":""}
+{"time":"2026-10-22 10:44:02,926","level":"DEBUG","logger":"health_check","msg":"check":"disk","server":"web2","usage":19}
+{"time":"2026-10-22 10:44:03,005","level":"DEBUG","logger":"health_check","msg":"cmd":"systemctl is-active nginx","rc":0,"stdout":"active","stderr":""}
+{"time":"2026-10-22 10:44:03,006","level":"DEBUG","logger":"health_check","msg":"check":"nginx_svc","server":"web2","state":"active"}
+{"time":"2026-10-22 10:44:03,010","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web2","code":200}
+{"time":"2026-10-22 10:44:03,013","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web2","status":"OK"}
+{"time":"2026-10-22 10:44:03,013","level":"INFO","logger":"health_check","msg":"event":"done","server":"web2","overall":"HEALTHY","elapsed_s":0.74}
+{"time":"2026-10-22 10:44:29,073","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web1","error":"bad key"}
+{"time":"2026-10-22 10:44:29,075","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web1","error":"Connection refused"}
+{"time":"2026-10-22 10:44:29,077","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web1","status":"OK"}
+{"time":"2026-10-22 10:44:29,080","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":7.7}
+{"time":"2026-10-22 10:44:29,083","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":94.0}
+{"time":"2026-10-22 10:44:29,088","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":38.0}
+{"time":"2026-10-22 10:44:29,091","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":93.9}
+{"time":"2026-10-22 10:44:29,096","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","error":"refused"}
+{"time":"2026-10-22 10:44:29,098","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","error":"timeout"}
+{"time":"2026-10-22 10:44:29,100","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-22 10:44:29,102","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","detail":"HTTP 200, body='maintenance'"}
+{"time":"2026-10-22 10:44:29,107","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-22 10:44:29,108","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"DEGRADED","elapsed_s":0.00}
+{"time":"2026-10-22 10:44:29,110","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-22 10:44:29,111","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"UNREACHABLE","elapsed_s":0.00}
+{"time":"2026-10-22 12:38:31,126","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-22 12:38:31,225","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web1","status":"OK"}
+{"time":"2026-10-22 12:38:31,679","level":"DEBUG","logger":"health_check","msg":"cmd":"top -bn1 | grep -i 'Cpu(s)'","rc":0,"stdout":"%Cpu(s):  3.1 us,  3.1 sy,  0.0 ni, 93.8 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st","stderr":""}
+{"time":"2026-10-22 12:38:31,680","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":6.2}
+{"time":"2026-10-22 12:38:31,756","level":"DEBUG","logger":"health_check","msg":"cmd":"free -m","rc":0,"stdout":"total        used        free      shared  buff/cache   available
+Mem:           31470       11036        6610        2250       16535       20433
+Swap:           8191           0        8191","stderr":""}
+{"time":"2026-10-22 12:38:31,757","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":35.1}
+{"time":"2026-10-22 12:38:31,829","level":"DEBUG","logger":"health_check","msg":"cmd":"df -h /","rc":0,"stdout":"Filesystem      Size  Used Avail Use% Mounted on
+overlay         476G   89G  383G  19% /","stderr":""}
+{"time":"2026-10-22 12:38:31,829","level":"DEBUG","logger":"health_check","msg":"check":"disk","server":"web1","usage":19}
+{"time":"2026-10-22 12:38:31,906","level":"DEBUG","logger":"health_check","msg":"cmd":"systemctl is-active nginx","rc":0,"stdout":"active","stderr":""}
+{"time":"2026-10-22 12:38:31,906","level":"DEBUG","logger":"health_check","msg":"check":"nginx_svc","server":"web1","state":"active"}
+{"time":"2026-10-22 12:38:31,915","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web1","code":200}
+{"time":"2026-10-22 12:38:31,919","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-22 12:38:31,919","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"HEALTHY","elapsed_s":0.79}
+{"time":"2026-10-22 12:38:31,919","level":"INFO","logger":"health_check","msg":"event":"start","server":"web2"}
+{"time":"2026-10-22 12:38:32,010","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web2","status":"OK"}
+{"time":"2026-10-22 12:38:32,454","level":"DEBUG","logger":"health_check","msg":"cmd":"top -bn1 | grep -i 'Cpu(s)'","rc":0,"stdout":"%Cpu(s):  0.6 us,  0.6 sy,  0.0 ni, 98.8 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st","stderr":""}
+{"time":"2026-10-22 12:38:32,454","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web2","usage":1.2}
+{"time":"2026-10-22 12:38:32,531","level":"DEBUG","logger":"health_check","msg":"cmd":"free -m","rc":0,"stdout":"total        used        free      shared  buff/cache   available
+Mem:           31470       11052        6594        2254       16539       20417
+Swap:           8191           0        8191","stderr":""}
+{"time":"2026-10-22 12:38:32,531","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web2","usage":35.1}
+{"time":"2026-10-22 12:38:32,604","level":"DEBUG","logger":"health_check","msg":"cmd":"df -h /","rc":0,"stdout":"Filesystem      Size  Used Avail Use% Mounted on
+overlay         476G   89G  383G  19% /","stderr":""}
+{"time":"2026-10-22 12:38:32,604","level":"DEBUG","logger":"health_check","msg":"check":"disk","server":"web2","usage":19}
+{"time":"2026-10-22 12:38:32,681","level":"DEBUG","logger":"health_check","msg":"cmd":"systemctl is-active nginx","rc":0,"stdout":"active","stderr":""}
+{"time":"2026-10-22 12:38:32,681","level":"DEBUG","logger":"health_check","msg":"check":"nginx_svc","server":"web2","state":"active"}
+{"time":"2026-10-22 12:38:32,687","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web2","code":200}
+{"time":"2026-10-22 12:38:32,692","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web2","status":"OK"}
+{"time":"2026-10-22 12:38:32,692","level":"INFO","logger":"health_check","msg":"event":"done","server":"web2","overall":"HEALTHY","elapsed_s":0.77}
+{"time":"2026-10-26 11:24:42,414","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-26 11:24:42,510","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web1","status":"OK"}
+{"time":"2026-10-26 11:24:42,880","level":"DEBUG","logger":"health_check","msg":"cmd":"top -bn1 | grep -i 'Cpu(s)'","rc":0,"stdout":"%Cpu(s):  6.1 us,  4.3 sy,  0.0 ni, 88.3 id,  0.0 wa,  0.6 hi,  0.6 si,  0.0 st","stderr":""}
+{"time":"2026-10-26 11:24:42,880","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":11.7}
+{"time":"2026-10-26 11:24:42,952","level":"DEBUG","logger":"health_check","msg":"cmd":"free -m","rc":0,"stdout":"total        used        free      shared  buff/cache   available
+Mem:           31470       11221        6119        2356       16948       20248
+Swap:           8191           0        8191","stderr":""}
+{"time":"2026-10-26 11:24:42,953","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":35.7}
+{"time":"2026-10-26 11:24:43,028","level":"DEBUG","logger":"health_check","msg":"cmd":"df -h /","rc":0,"stdout":"Filesystem      Size  Used Avail Use% Mounted on
+overlay         476G   89G  382G  19% /","stderr":""}
+{"time":"2026-10-26 11:24:43,028","level":"DEBUG","logger":"health_check","msg":"check":"disk","server":"web1","usage":19}
+{"time":"2026-10-26 11:24:43,105","level":"DEBUG","logger":"health_check","msg":"cmd":"systemctl is-active nginx","rc":0,"stdout":"active","stderr":""}
+{"time":"2026-10-26 11:24:43,106","level":"DEBUG","logger":"health_check","msg":"check":"nginx_svc","server":"web1","state":"active"}
+{"time":"2026-10-26 11:24:43,113","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web1","code":200}
+{"time":"2026-10-26 11:24:43,116","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-26 11:24:43,117","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"HEALTHY","elapsed_s":0.70}
+{"time":"2026-10-26 12:52:09,049","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-26 12:52:09,148","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web1","status":"OK"}
+{"time":"2026-10-26 12:52:09,597","level":"DEBUG","logger":"health_check","msg":"cmd":"top -bn1 | grep -i 'Cpu(s)'","rc":0,"stdout":"%Cpu(s): 13.6 us,  2.5 sy,  0.0 ni, 83.3 id,  0.0 wa,  0.0 hi,  0.6 si,  0.0 st","stderr":""}
+{"time":"2026-10-26 12:52:09,598","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":16.7}
+{"time":"2026-10-26 12:52:09,667","level":"DEBUG","logger":"health_check","msg":"cmd":"free -m","rc":0,"stdout":"total        used        free      shared  buff/cache   available
+Mem:           31470       11374        5956        2346       16947       20095
+Swap:           8191           0        8191","stderr":""}
+{"time":"2026-10-26 12:52:09,668","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":36.1}
+{"time":"2026-10-26 12:52:09,735","level":"DEBUG","logger":"health_check","msg":"cmd":"df -h /","rc":0,"stdout":"Filesystem      Size  Used Avail Use% Mounted on
+overlay         476G   89G  382G  19% /","stderr":""}
+{"time":"2026-10-26 12:52:09,736","level":"DEBUG","logger":"health_check","msg":"check":"disk","server":"web1","usage":19}
+{"time":"2026-10-26 12:52:09,809","level":"DEBUG","logger":"health_check","msg":"cmd":"systemctl is-active nginx","rc":0,"stdout":"active","stderr":""}
+{"time":"2026-10-26 12:52:09,809","level":"DEBUG","logger":"health_check","msg":"check":"nginx_svc","server":"web1","state":"active"}
+{"time":"2026-10-26 12:52:09,816","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web1","code":200}
+{"time":"2026-10-26 12:52:09,820","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-26 12:52:09,820","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"HEALTHY","elapsed_s":0.77}
+{"time":"2026-10-26 12:52:09,821","level":"INFO","logger":"health_check","msg":"event":"start","server":"web2"}
+{"time":"2026-10-26 12:52:09,910","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web2","status":"OK"}
+{"time":"2026-10-26 12:52:10,339","level":"DEBUG","logger":"health_check","msg":"cmd":"top -bn1 | grep -i 'Cpu(s)'","rc":0,"stdout":"%Cpu(s): 13.0 us,  1.9 sy,  0.0 ni, 83.9 id,  0.6 wa,  0.6 hi,  0.0 si,  0.0 st","stderr":""}
+{"time":"2026-10-26 12:52:10,339","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web2","usage":16.1}
+{"time":"2026-10-26 12:52:10,406","level":"DEBUG","logger":"health_check","msg":"cmd":"free -m","rc":0,"stdout":"total        used        free      shared  buff/cache   available
+Mem:           31470       11387        5943        2346       16947       20083
+Swap:           8191           0        8191","stderr":""}
+{"time":"2026-10-26 12:52:10,407","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web2","usage":36.2}
+{"time":"2026-10-26 12:52:10,471","level":"DEBUG","logger":"health_check","msg":"cmd":"df -h /","rc":0,"stdout":"Filesystem      Size  Used Avail Use% Mounted on
+overlay         476G   89G  382G  19% /","stderr":""}
+{"time":"2026-10-26 12:52:10,472","level":"DEBUG","logger":"health_check","msg":"check":"disk","server":"web2","usage":19}
+{"time":"2026-10-26 12:52:10,544","level":"DEBUG","logger":"health_check","msg":"cmd":"systemctl is-active nginx","rc":0,"stdout":"active","stderr":""}
+{"time":"2026-10-26 12:52:10,544","level":"DEBUG","logger":"health_check","msg":"check":"nginx_svc","server":"web2","state":"active"}
+{"time":"2026-10-26 12:52:10,550","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web2","code":200}
+{"time":"2026-10-26 12:52:10,556","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web2","status":"OK"}
+{"time":"2026-10-26 12:52:10,556","level":"INFO","logger":"health_check","msg":"event":"done","server":"web2","overall":"HEALTHY","elapsed_s":0.74}
+{"time":"2026-10-26 12:52:56,695","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-26 12:52:56,792","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web1","status":"OK"}
+{"time":"2026-10-26 12:52:57,230","level":"DEBUG","logger":"health_check","msg":"cmd":"top -bn1 | grep -i 'Cpu(s)'","rc":0,"stdout":"%Cpu(s): 14.3 us,  3.1 sy,  0.0 ni, 82.0 id,  0.0 wa,  0.6 hi,  0.0 si,  0.0 st","stderr":""}
+{"time":"2026-10-26 12:52:57,230","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":18.0}
+{"time":"2026-10-26 12:52:57,299","level":"DEBUG","logger":"health_check","msg":"cmd":"free -m","rc":0,"stdout":"total        used        free      shared  buff/cache   available
+Mem:           31470       11360        5969        2333       16934       20109
+Swap:           8191           0        8191","stderr":""}
+{"time":"2026-10-26 12:52:57,299","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":36.1}
+{"time":"2026-10-26 12:52:57,367","level":"DEBUG","logger":"health_check","msg":"cmd":"df -h /","rc":0,"stdout":"Filesystem      Size  Used Avail Use% Mounted on
+overlay         476G   89G  382G  19% /","stderr":""}
+{"time":"2026-10-26 12:52:57,368","level":"DEBUG","logger":"health_check","msg":"check":"disk","server":"web1","usage":19}
+{"time":"2026-10-26 12:52:57,438","level":"DEBUG","logger":"health_check","msg":"cmd":"systemctl is-active nginx","rc":0,"stdout":"active","stderr":""}
+{"time":"2026-10-26 12:52:57,439","level":"DEBUG","logger":"health_check","msg":"check":"nginx_svc","server":"web1","state":"active"}
+{"time":"2026-10-26 12:52:57,446","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web1","code":200}
+{"time":"2026-10-26 12:52:57,450","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-26 12:52:57,450","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"HEALTHY","elapsed_s":0.76}
+{"time":"2026-10-26 12:52:57,451","level":"INFO","logger":"health_check","msg":"event":"start","server":"web2"}
+{"time":"2026-10-26 12:52:57,538","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web2","status":"OK"}
+{"time":"2026-10-26 12:52:57,968","level":"DEBUG","logger":"health_check","msg":"cmd":"top -bn1 | grep -i 'Cpu(s)'","rc":0,"stdout":"%Cpu(s): 13.4 us,  2.4 sy,  0.0 ni, 82.9 id,  0.0 wa,  0.6 hi,  0.6 si,  0.0 st","stderr":""}
+{"time":"2026-10-26 12:52:57,968","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web2","usage":17.1}
+{"time":"2026-10-26 12:52:58,037","level":"DEBUG","logger":"health_check","msg":"cmd":"free -m","rc":0,"stdout":"total        used        free      shared  buff/cache   available
+Mem:           31470       11364        5966        2333       16935       20105
+Swap:           8191           0        8191","stderr":""}
+{"time":"2026-10-26 12:52:58,037","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web2","usage":36.1}
+{"time":"2026-10-26 12:52:58,106","level":"DEBUG","logger":"health_check","msg":"cmd":"df -h /","rc":0,"stdout":"Filesystem      Size  Used Avail Use% Mounted on
+overlay         476G   89G  382G  19% /","stderr":""}
+{"time":"2026-10-26 12:52:58,107","level":"DEBUG","logger":"health_check","msg":"check":"disk","server":"web2","usage":19}
+{"time":"2026-10-26 12:52:58,179","level":"DEBUG","logger":"health_check","msg":"cmd":"systemctl is-active nginx","rc":0,"stdout":"active","stderr":""}
+{"time":"2026-10-26 12:52:58,180","level":"DEBUG","logger":"health_check","msg":"check":"nginx_svc","server":"web2","state":"active"}
+{"time":"2026-10-26 12:52:58,184","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web2","code":200}
+{"time":"2026-10-26 12:52:58,187","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web2","status":"OK"}
+{"time":"2026-10-26 12:52:58,187","level":"INFO","logger":"health_check","msg":"event":"done","server":"web2","overall":"HEALTHY","elapsed_s":0.74}
+{"time":"2026-10-26 16:19:54,778","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web1","error":"bad key"}
+{"time":"2026-10-26 16:19:54,781","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web1","error":"Connection refused"}
+{"time":"2026-10-26 16:19:54,783","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web1","status":"OK"}
+{"time":"2026-10-26 16:19:54,786","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":7.7}
+{"time":"2026-10-26 16:19:54,788","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":94.0}
+{"time":"2026-10-26 16:19:54,792","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":38.0}
+{"time":"2026-10-26 16:19:54,795","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":93.9}
+{"time":"2026-10-26 16:19:54,800","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","error":"refused"}
+{"time":"2026-10-26 16:19:54,802","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","error":"timeout"}
+{"time":"2026-10-26 16:19:54,805","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-26 16:19:54,807","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","detail":"HTTP 200, body='maintenance'"}
+{"time":"2026-10-26 16:19:54,810","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-26 16:19:54,811","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"DEGRADED","elapsed_s":0.00}
+{"time":"2026-10-26 16:19:54,814","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-26 16:19:54,815","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"UNREACHABLE","elapsed_s":0.00}
+{"time":"2026-10-26 16:20:25,995","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web1","error":"bad key"}
+{"time":"2026-10-26 16:20:25,997","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web1","error":"Connection refused"}
+{"time":"2026-10-26 16:20:25,999","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web1","status":"OK"}
+{"time":"2026-10-26 16:20:26,002","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":7.7}
+{"time":"2026-10-26 16:20:26,004","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":94.0}
+{"time":"2026-10-26 16:20:26,008","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":38.0}
+{"time":"2026-10-26 16:20:26,010","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":93.9}
+{"time":"2026-10-26 16:20:26,015","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","error":"refused"}
+{"time":"2026-10-26 16:20:26,016","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","error":"timeout"}
+{"time":"2026-10-26 16:20:26,019","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-26 16:20:26,021","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","detail":"HTTP 200, body='maintenance'"}
+{"time":"2026-10-26 16:20:26,025","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-26 16:20:26,025","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"DEGRADED","elapsed_s":0.00}
+{"time":"2026-10-26 16:20:26,027","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-26 16:20:26,028","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"UNREACHABLE","elapsed_s":0.00}
+{"time":"2026-10-26 16:29:26,194","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web1","error":"bad key"}
+{"time":"2026-10-26 16:29:26,196","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web1","error":"Connection refused"}
+{"time":"2026-10-26 16:29:26,198","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web1","status":"OK"}
+{"time":"2026-10-26 16:29:26,200","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":7.7}
+{"time":"2026-10-26 16:29:26,203","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":94.0}
+{"time":"2026-10-26 16:29:26,207","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":38.0}
+{"time":"2026-10-26 16:29:26,209","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":93.9}
+{"time":"2026-10-26 16:29:26,213","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","error":"refused"}
+{"time":"2026-10-26 16:29:26,215","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","error":"timeout"}
+{"time":"2026-10-26 16:29:26,218","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-26 16:29:26,220","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","detail":"HTTP 200, body='maintenance'"}
+{"time":"2026-10-26 16:29:26,224","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-26 16:29:26,225","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"DEGRADED","elapsed_s":0.00}
+{"time":"2026-10-26 16:29:26,227","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-26 16:29:26,227","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"UNREACHABLE","elapsed_s":0.00}
+{"time":"2026-10-26 16:29:34,960","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web1","error":"bad key"}
+{"time":"2026-10-26 16:29:34,962","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web1","error":"Connection refused"}
+{"time":"2026-10-26 16:29:34,963","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web1","status":"OK"}
+{"time":"2026-10-26 16:29:34,966","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":7.7}
+{"time":"2026-10-26 16:29:34,969","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":94.0}
+{"time":"2026-10-26 16:29:34,973","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":38.0}
+{"time":"2026-10-26 16:29:34,975","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":93.9}
+{"time":"2026-10-26 16:29:34,979","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","error":"refused"}
+{"time":"2026-10-26 16:29:34,981","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","error":"timeout"}
+{"time":"2026-10-26 16:29:34,984","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-26 16:29:34,985","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","detail":"HTTP 200, body='maintenance'"}
+{"time":"2026-10-26 16:29:34,990","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-26 16:29:34,990","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"DEGRADED","elapsed_s":0.00}
+{"time":"2026-10-26 16:29:34,992","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-26 16:29:34,993","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"UNREACHABLE","elapsed_s":0.00}
+{"time":"2026-10-26 16:29:54,510","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web1","error":"bad key"}
+{"time":"2026-10-26 16:29:54,512","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web1","error":"Connection refused"}
+{"time":"2026-10-26 16:29:54,513","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web1","status":"OK"}
+{"time":"2026-10-26 16:29:54,516","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":7.7}
+{"time":"2026-10-26 16:29:54,519","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":94.0}
+{"time":"2026-10-26 16:29:54,524","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":38.0}
+{"time":"2026-10-26 16:29:54,527","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":93.9}
+{"time":"2026-10-26 16:29:54,531","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","error":"refused"}
+{"time":"2026-10-26 16:29:54,533","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","error":"timeout"}
+{"time":"2026-10-26 16:29:54,535","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-26 16:29:54,538","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web1","detail":"HTTP 200, body='maintenance'"}
+{"time":"2026-10-26 16:29:54,543","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-26 16:29:54,544","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"DEGRADED","elapsed_s":0.00}
+{"time":"2026-10-26 16:29:54,546","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-26 16:29:54,546","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"UNREACHABLE","elapsed_s":0.00}
+{"time":"2026-10-26 16:30:59,987","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web2","error":"bad key"}
+{"time":"2026-10-26 16:30:59,989","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web2","error":"Connection refused"}
+{"time":"2026-10-26 16:30:59,991","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web2","status":"OK"}
+{"time":"2026-10-26 16:30:59,994","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":7.7}
+{"time":"2026-10-26 16:30:59,996","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":94.0}
+{"time":"2026-10-26 16:31:00,002","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":38.0}
+{"time":"2026-10-26 16:31:00,004","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":93.9}
+{"time":"2026-10-26 16:31:00,008","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web2","error":"refused"}
+{"time":"2026-10-26 16:31:00,010","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web2","error":"timeout"}
+{"time":"2026-10-26 16:31:00,013","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web2","status":"OK"}
+{"time":"2026-10-26 16:31:00,015","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web2","detail":"HTTP 200, body='maintenance'"}
+{"time":"2026-10-26 16:31:00,021","level":"INFO","logger":"health_check","msg":"event":"start","server":"web2"}
+{"time":"2026-10-26 16:31:00,022","level":"INFO","logger":"health_check","msg":"event":"done","server":"web2","overall":"DEGRADED","elapsed_s":0.00}
+{"time":"2026-10-26 16:31:00,024","level":"INFO","logger":"health_check","msg":"event":"start","server":"web2"}
+{"time":"2026-10-26 16:31:00,024","level":"INFO","logger":"health_check","msg":"event":"done","server":"web2","overall":"UNREACHABLE","elapsed_s":0.00}
+{"time":"2026-10-26 16:32:27,941","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web2","error":"bad key"}
+{"time":"2026-10-26 16:32:27,943","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web2","error":"Connection refused"}
+{"time":"2026-10-26 16:32:27,946","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web2","status":"OK"}
+{"time":"2026-10-26 16:32:27,949","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":7.7}
+{"time":"2026-10-26 16:32:27,952","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":94.0}
+{"time":"2026-10-26 16:32:27,958","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":38.0}
+{"time":"2026-10-26 16:32:27,961","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":93.9}
+{"time":"2026-10-26 16:32:27,967","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web2","error":"refused"}
+{"time":"2026-10-26 16:32:27,970","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web2","error":"timeout"}
+{"time":"2026-10-26 16:32:27,974","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web2","status":"OK"}
+{"time":"2026-10-26 16:32:27,976","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web2","detail":"HTTP 200, body='maintenance'"}
+{"time":"2026-10-26 16:32:27,981","level":"INFO","logger":"health_check","msg":"event":"start","server":"web2"}
+{"time":"2026-10-26 16:32:27,982","level":"INFO","logger":"health_check","msg":"event":"done","server":"web2","overall":"DEGRADED","elapsed_s":0.00}
+{"time":"2026-10-26 16:32:27,985","level":"INFO","logger":"health_check","msg":"event":"start","server":"web2"}
+{"time":"2026-10-26 16:32:27,985","level":"INFO","logger":"health_check","msg":"event":"done","server":"web2","overall":"UNREACHABLE","elapsed_s":0.00}
+{"time":"2026-10-26 16:41:32,919","level":"INFO","logger":"health_check","msg":"event":"start","server":"web1"}
+{"time":"2026-10-26 16:41:33,017","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web1","status":"OK"}
+{"time":"2026-10-26 16:41:33,460","level":"DEBUG","logger":"health_check","msg":"cmd":"top -bn1 | grep -i 'Cpu(s)'","rc":0,"stdout":"%Cpu(s): 19.1 us,  3.7 sy,  0.0 ni, 75.9 id,  0.0 wa,  0.6 hi,  0.6 si,  0.0 st","stderr":""}
+{"time":"2026-10-26 16:41:33,461","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":24.1}
+{"time":"2026-10-26 16:41:33,532","level":"DEBUG","logger":"health_check","msg":"cmd":"free -m","rc":0,"stdout":"total        used        free      shared  buff/cache   available
+Mem:           31470       12029        5273        2401       17031       19440
+Swap:           8191           0        8191","stderr":""}
+{"time":"2026-10-26 16:41:33,533","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":38.2}
+{"time":"2026-10-26 16:41:33,605","level":"DEBUG","logger":"health_check","msg":"cmd":"df -h /","rc":0,"stdout":"Filesystem      Size  Used Avail Use% Mounted on
+overlay         476G   89G  382G  19% /","stderr":""}
+{"time":"2026-10-26 16:41:33,605","level":"DEBUG","logger":"health_check","msg":"check":"disk","server":"web1","usage":19}
+{"time":"2026-10-26 16:41:33,681","level":"DEBUG","logger":"health_check","msg":"cmd":"systemctl is-active nginx","rc":0,"stdout":"active","stderr":""}
+{"time":"2026-10-26 16:41:33,682","level":"DEBUG","logger":"health_check","msg":"check":"nginx_svc","server":"web1","state":"active"}
+{"time":"2026-10-26 16:41:33,689","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web1","code":200}
+{"time":"2026-10-26 16:41:33,693","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web1","status":"OK"}
+{"time":"2026-10-26 16:41:33,693","level":"INFO","logger":"health_check","msg":"event":"done","server":"web1","overall":"HEALTHY","elapsed_s":0.77}
+{"time":"2026-10-26 16:41:33,694","level":"INFO","logger":"health_check","msg":"event":"start","server":"web2"}
+{"time":"2026-10-26 16:41:33,787","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web2","status":"OK"}
+{"time":"2026-10-26 16:41:34,235","level":"DEBUG","logger":"health_check","msg":"cmd":"top -bn1 | grep -i 'Cpu(s)'","rc":0,"stdout":"%Cpu(s):  6.2 us,  1.9 sy,  0.0 ni, 90.7 id,  0.6 wa,  0.6 hi,  0.0 si,  0.0 st","stderr":""}
+{"time":"2026-10-26 16:41:34,236","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web2","usage":9.3}
+{"time":"2026-10-26 16:41:34,314","level":"DEBUG","logger":"health_check","msg":"cmd":"free -m","rc":0,"stdout":"total        used        free      shared  buff/cache   available
+Mem:           31470       12030        5271        2399       17029       19439
+Swap:           8191           0        8191","stderr":""}
+{"time":"2026-10-26 16:41:34,314","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web2","usage":38.2}
+{"time":"2026-10-26 16:41:34,387","level":"DEBUG","logger":"health_check","msg":"cmd":"df -h /","rc":0,"stdout":"Filesystem      Size  Used Avail Use% Mounted on
+overlay         476G   89G  382G  19% /","stderr":""}
+{"time":"2026-10-26 16:41:34,387","level":"DEBUG","logger":"health_check","msg":"check":"disk","server":"web2","usage":19}
+{"time":"2026-10-26 16:41:34,468","level":"DEBUG","logger":"health_check","msg":"cmd":"systemctl is-active nginx","rc":0,"stdout":"active","stderr":""}
+{"time":"2026-10-26 16:41:34,468","level":"DEBUG","logger":"health_check","msg":"check":"nginx_svc","server":"web2","state":"active"}
+{"time":"2026-10-26 16:41:34,474","level":"DEBUG","logger":"health_check","msg":"check":"http_home","server":"web2","code":200}
+{"time":"2026-10-26 16:41:34,479","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web2","status":"OK"}
+{"time":"2026-10-26 16:41:34,480","level":"INFO","logger":"health_check","msg":"event":"done","server":"web2","overall":"HEALTHY","elapsed_s":0.79}
+{"time":"2026-10-26 16:44:39,087","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web2","error":"bad key"}
+{"time":"2026-10-26 16:44:39,090","level":"WARNING","logger":"health_check","msg":"check":"ssh","server":"web2","error":"Connection refused"}
+{"time":"2026-10-26 16:44:39,092","level":"DEBUG","logger":"health_check","msg":"check":"ssh","server":"web2","status":"OK"}
+{"time":"2026-10-26 16:44:39,095","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":7.7}
+{"time":"2026-10-26 16:44:39,098","level":"DEBUG","logger":"health_check","msg":"check":"cpu","server":"web1","usage":94.0}
+{"time":"2026-10-26 16:44:39,104","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":38.0}
+{"time":"2026-10-26 16:44:39,107","level":"DEBUG","logger":"health_check","msg":"check":"mem","server":"web1","usage":93.9}
+{"time":"2026-10-26 16:44:39,111","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web2","error":"refused"}
+{"time":"2026-10-26 16:44:39,113","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web2","error":"timeout"}
+{"time":"2026-10-26 16:44:39,117","level":"DEBUG","logger":"health_check","msg":"check":"http_health","server":"web2","status":"OK"}
+{"time":"2026-10-26 16:44:39,119","level":"WARNING","logger":"health_check","msg":"check":"http_health","server":"web2","detail":"HTTP 200, body='maintenance'"}
+{"time":"2026-10-26 16:44:39,124","level":"INFO","logger":"health_check","msg":"event":"start","server":"web2"}
+{"time":"2026-10-26 16:44:39,125","level":"INFO","logger":"health_check","msg":"event":"done","server":"web2","overall":"DEGRADED","elapsed_s":0.00}
+{"time":"2026-10-26 16:44:39,127","level":"INFO","logger":"health_check","msg":"event":"start","server":"web2"}
+{"time":"2026-10-26 16:44:39,127","level":"INFO","logger":"health_check","msg":"event":"done","server":"web2","overall":"UNREACHABLE","elapsed_s":0.00}

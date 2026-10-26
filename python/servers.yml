@@ -1,0 +1,27 @@
+# servers.yml
+# -----------
+# Optional config file for health_check.py --config servers.yml
+#
+# Use this file when you want to:
+#   - override default ports (e.g. you changed them in variables.tf)
+#   - point to a different SSH key
+#   - add more servers without touching health_check.py
+#
+# Usage:
+#   python health_check.py --config servers.yml
+#   python health_check.py --config servers.yml --server web1
+
+servers:
+  - name: web1
+    host: 127.0.0.1
+    ssh_port: 2221
+    http_port: 8081
+    ssh_user: devops
+    ssh_key_path: ~/.ssh/infra_lab
+
+  - name: web2
+    host: 127.0.0.1
+    ssh_port: 2222
+    http_port: 8082
+    ssh_user: devops
+    ssh_key_path: ~/.ssh/infra_lab
