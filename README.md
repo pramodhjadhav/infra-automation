@@ -7,8 +7,8 @@ A small, fully local infrastructure automation project. It runs on Fedora with
 |------|-------|--------|
 | 1 | Terraform + Podman: two SSH-enabled Linux containers | ✅ Done |
 | 2 | Ansible: users, Nginx, templates, verification | ✅ Done |
-| 3 | Python health-check CLI + unit tests | 🔄 In Progress |
-| 4 | End-to-end automation script | Planned |
+| 3 | Python health-check CLI + unit tests | ✅ Done |
+| 4 | End-to-end automation script | ✅ Done |
 
 ---
 
@@ -49,11 +49,13 @@ infra-automation/
 │       ├── common/                # users, SSH keys, sudo
 │       ├── nginx/                 # install, config templates, enable
 │       └── verify/                # service + HTTP endpoint checks
-├── python/                        # Week 3 (in progress)
+├── python/                        # Week 3 – health-check CLI
 │   ├── health_check.py            # CLI health-check application
-│   ├── requirements.txt
+│   ├── requirements.txt           # pinned dependencies
+│   ├── servers.yml                # optional config override for --config flag
 │   └── tests/
-│       └── test_health_check.py   # unit tests (3–5 cases)
+│       └── test_health_check.py   # 16 unit tests (unittest.mock)
+├── run_all.sh                     # Week 4 – end-to-end automation script
 ├── docs/
 │   ├── week2-playbook-run.txt     # sample Ansible run output
 │   ├── week2-web1-page.html
@@ -233,7 +235,7 @@ complete with `ok=17 changed=0` on the second run.
 
 ## Week 3: Python Health-Check CLI
 
-> **Status: 🔄 In Progress**
+> **Status: ✅ Done**
 
 ### Objective
 
@@ -241,14 +243,15 @@ Develop a Python command-line application to monitor both servers. It checks
 connectivity, CPU, memory, disk, Nginx/service status, and HTTP availability.
 Includes structured logging, error handling, and unit tests.
 
-### Planned structure
+### Structure
 
 ```
 python/
 ├── health_check.py          # CLI entry-point (argparse)
 ├── requirements.txt         # paramiko, requests, tabulate, pytest
+├── servers.yml              # optional server config for --config flag
 └── tests/
-    └── test_health_check.py # 3–5 unit tests using unittest.mock
+    └── test_health_check.py # 16 unit tests using unittest.mock
 ```
 
 ### Checks performed per server
@@ -263,39 +266,88 @@ python/
 | HTTP home page | `requests.get` to host port | HTTP 200 |
 | HTTP `/health` endpoint | `requests.get` to host port | HTTP 200, body == `ok` |
 
-### Run it (once implemented)
+### Run it
 
 ```bash
 cd python
-pip install -r requirements.txt
-python health_check.py                        # check both servers, print table
-python health_check.py --server web1          # single server
-python health_check.py --output json          # JSON report
-pytest tests/ -v                             # run unit tests
+source .venv/bin/activate              # activate the virtualenv
+python health_check.py                 # check both servers, print table
+python health_check.py --server web1   # single server
+python health_check.py --output json   # JSON report
+python health_check.py --config servers.yml  # use YAML config instead of defaults
+pytest tests/ -v                       # run 16 unit tests
 ```
 
-### Expected output (sample)
+### Sample output
 
 ```
-Server  SSH   CPU   Mem   Disk  Nginx   HTTP  /health  Overall
-------  ----  ----  ----  ----  ------  ----  -------  -------
-web1    OK    12%   34%   18%   active  200   ok       HEALTHY
-web2    OK    9%    31%   18%   active  200   ok       HEALTHY
+Infra Health Report  —  2025-07-08 10:42:17
+================================================================
+
+Server  SSH        CPU    MEM    DISK   NGINX   HTTP  /health  Overall     Time(s)
+------  ---------  -----  -----  -----  ------  ----  -------  ----------  -------
+web1    connected  12.4%  33.8%  18%    active  200   ok       HEALTHY     1.23s
+web2    connected  9.1%   31.2%  18%    active  200   ok       HEALTHY     1.19s
+
+All servers healthy.
 ```
+
+### Design decisions (Week 3)
+
+- **`paramiko` for SSH** — gives programmatic access to run commands over SSH without shelling out to `ssh`. Uses key-only auth (`allow_agent=False`, `look_for_keys=False`).
+- **`AutoAddPolicy`** — mirrors `-o StrictHostKeyChecking=no` used by SSH and Ansible; necessary because ephemeral containers get a new host key when recreated.
+- **`SSHSession` context manager** — guarantees the connection is always closed even if a check raises an exception (`__exit__` calls `close()`).
+- **One function per check** — each returns a `CheckResult` dataclass and never raises; failures are returned as `STATUS_FAIL`, not unhandled exceptions.
+- **HTTP checks are independent of SSH** — even if SSH is broken, the HTTP port may still answer; both are always tested.
+- **Three overall states: HEALTHY / DEGRADED / UNREACHABLE** — `UNREACHABLE` means SSH itself failed; `DEGRADED` means SSH worked but at least one metric failed.
+- **Structured JSON logging to file** — machine-readable and parseable by log collectors; human-readable format on the console.
+- **`--config servers.yml`** — decouples the server list from the code so the same script works for any environment without editing Python.
+
+### Challenges (Week 3)
+
+- `RejectPolicy` caused "not found in known_hosts" errors because the containers get a new host key on each recreate → changed to `AutoAddPolicy`.
+- `top` output format varies between Linux distributions; used regex on the idle% field (`\d+\.\d+\s+id`) instead of positional parsing.
 
 ---
 
 ## Week 4: End-to-End Integration
 
-> **Status: Planned**
+> **Status: ✅ Done**
 
-A single shell script (`run_all.sh`) will:
-1. Build the container image (if not present)
-2. `terraform apply` — provision the two containers
-3. Generate the Ansible inventory from Terraform output
-4. `ansible-playbook site.yml` — configure both servers
-5. `python health_check.py` — run health checks and print the report
-6. Exit non-zero if any server is unhealthy
+### Objective
+
+A single script (`run_all.sh`) integrates all four tools — Podman, Terraform,
+Ansible, and Python — into one automated workflow that can be run from a clean
+state.
+
+### Run it
+
+```bash
+chmod +x run_all.sh
+./run_all.sh                   # full workflow
+./run_all.sh --skip-build      # skip image build (image already exists)
+./run_all.sh --skip-tests      # skip unit tests
+./run_all.sh --destroy         # tear down infrastructure at the end
+```
+
+### What the script does (step by step)
+
+| Step | Tool | What happens |
+|------|------|-------------|
+| Pre-flight | bash | Checks `podman`, `terraform`, `ansible-playbook`, `python3` exist; verifies the Podman socket and SSH key are present |
+| 1 | Podman | Builds `localhost/infra-node:latest` from `images/node/Containerfile` — skipped if image already exists |
+| 2 | Terraform | Runs `terraform init` + `terraform apply -auto-approve`; exports `TF_VAR_podman_socket` automatically |
+| 3 | Terraform + Ansible | Runs `terraform output -raw ansible_inventory` to regenerate `ansible/inventory.ini`; pings both hosts to confirm reachability |
+| 4 | Ansible | Runs `ansible-playbook site.yml` — creates users, configures Nginx, verifies service |
+| 5 | Python / pytest | Activates the venv and runs `pytest tests/ -v` — 16 unit tests, no live infra needed |
+| 6 | Python | Runs `python health_check.py` — live SSH + HTTP checks; exits `0` if all healthy |
+
+### Exit codes
+
+| Code | Meaning |
+|------|---------|
+| `0` | All steps passed and both servers are healthy |
+| `1` | Any step failed (detailed reason printed before exit) |
 
 ---
 

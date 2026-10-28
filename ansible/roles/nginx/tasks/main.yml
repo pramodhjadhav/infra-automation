@@ -1,4 +1,8 @@
 ---
+- name: Clean DNF metadata cache (prevents stale checksum errors in reused containers)
+  ansible.builtin.command: dnf clean all
+  changed_when: false
+
 - name: Install Nginx
   ansible.builtin.dnf:
     name: nginx
